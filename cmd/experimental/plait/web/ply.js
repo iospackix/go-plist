@@ -1,7 +1,7 @@
 import "./ply_exec.js";
 
 let wasmModule;
-async function ply(doc, format) {
+exporft async function ply(doc, format) {
 	const go = new Ply();
 	if (typeof(wasmModule) === "undefined") {
 		let plyWasm = fetch("ply.wasm");
