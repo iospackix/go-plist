@@ -2,7 +2,7 @@
   "name": "go-plist",
   "version": "1.0.0",
   "description": "",
-  "main": "run.js",
+  "main": "cmd/experimental/plait/web/ply.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
