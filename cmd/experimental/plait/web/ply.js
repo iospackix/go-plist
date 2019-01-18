@@ -1,11 +1,11 @@
-import "./ply_exec.js";
+const fs = require('fs')
 
 let wasmModule;
 exporft async function ply(doc, format) {
 	const go = new Ply();
 	if (typeof(wasmModule) === "undefined") {
 		let plyWasm = fetch("ply.wasm");
-		await WebAssembly.compileStreaming(plyWasm).then(m => {
+		await WebAssembly.compileStreaming(fs.createReadStream('./ply_exec.js')).then(m => {
 			wasmModule = m;
 		})
 	}
